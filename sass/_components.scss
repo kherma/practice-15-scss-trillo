@@ -1,4 +1,45 @@
 // ////////////////////////
+// UTILS
+
+.btn-inline {
+  border: none;
+  color: $pink-medium;
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding-bottom: 0.5rem;
+  margin-left: 1rem;
+
+  &:hover {
+    color: $grey-dark-1;
+  }
+
+  &:focus {
+    outline: none;
+    animation: btn-anim 1s infinite;
+  }
+}
+
+@keyframes btn-anim {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 5rem rgba($black, 0.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+// ////////////////////////
 // LOGO
 
 .logo {
@@ -183,4 +224,76 @@
   text-align: center;
   padding: 2.5rem;
   color: $grey-light-4;
+}
+
+// ////////////////////////
+// GALLERY
+
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+// ////////////////////////
+// OVERVIEW
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $grey-light-3;
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  &__location {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: $pink-medium;
+  }
+
+  &__rating {
+    background-color: $pink-medium;
+    margin-left: 3rem;
+    color: $white;
+    align-self: stretch;
+    padding: 0 2.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__rating-average {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: -3px;
+  }
+
+  &__rating-count {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
 }
