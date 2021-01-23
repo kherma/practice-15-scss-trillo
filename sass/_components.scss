@@ -48,6 +48,55 @@
   }
 }
 
+.btn {
+  font-size: 1.5rem;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  cursor: pointer;
+  background-image: linear-gradient(to right, $pink-light, $pink-dark);
+  color: $white;
+  position: relative;
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+    animation: btn-anim 1s infinite;
+  }
+
+  &__visible {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+    padding: 2rem 0;
+    position: absolute;
+    left: 0;
+    top: -100%;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, $pink-light, $pink-dark);
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+}
+
 // ////////////////////////
 // LOGO
 
@@ -438,5 +487,20 @@
     font-size: 2.2rem;
     font-weight: 300;
     color: $pink-dark;
+  }
+}
+
+// ////////////////////////
+// CTA
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
   }
 }
