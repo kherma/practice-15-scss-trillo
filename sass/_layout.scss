@@ -1,6 +1,6 @@
 .container {
   max-width: 120rem;
-  margin: 8rem auto;
+  margin: 5rem auto;
   background-color: $grey-light-2;
   box-shadow: $box-shadow-main;
   min-height: 50rem;
@@ -38,6 +38,7 @@
   padding: 4.5rem;
   background-color: $grey-light-1;
   border-bottom: $border-main;
+  font-size: 1.4rem;
 }
 
 .description {
@@ -46,10 +47,11 @@
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem;
-  font-size: 1.4rem;
 }
 
 .users-reviews {
-  background-color: lavenderblush;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
