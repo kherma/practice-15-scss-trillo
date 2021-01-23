@@ -114,6 +114,12 @@
   align-items: center;
   justify-content: center;
 
+  @include bp-5 {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: $grey-light-2;
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -222,12 +228,25 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @include bp-3 {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+  }
+
   &__item {
     display: block;
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+      @include bp-3 {
+        margin: 0;
+      }
+    }
+
+    @include bp-3 {
+      flex: 1;
     }
 
     &::before {
@@ -264,6 +283,16 @@
     padding: 1.5rem 3rem;
     display: flex;
     align-items: center;
+
+    @include bp-3 {
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    @include bp-4 {
+      flex-direction: column;
+      padding: 1.5rem 3rem;
+    }
   }
 
   &__icon {
@@ -271,6 +300,13 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @include bp-4 {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 
@@ -282,6 +318,10 @@
   text-align: center;
   padding: 2.5rem;
   color: $grey-light-4;
+
+  @include bp-3 {
+    display: none;
+  }
 }
 
 // ////////////////////////
@@ -310,6 +350,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @include bp-4 {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -342,17 +387,30 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @include bp-4 {
+      padding: 0 1.5rem;
+      text-align: center;
+    }
   }
 
   &__rating-average {
     font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: -3px;
+
+    @include bp-4 {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count {
     font-size: 1rem;
     text-transform: uppercase;
+
+    @include bp-4 {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -414,6 +472,10 @@
     margin-right: auto;
   }
 
+  &__friends {
+    display: flex;
+  }
+
   &__photo {
     height: 4rem;
     width: 4rem;
@@ -422,7 +484,7 @@
     box-sizing: content-box;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
@@ -437,6 +499,11 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+
+  @include bp-3 {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 
   &::before {
     content: '\201C';
@@ -496,6 +563,10 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
+  @include bp-3 {
+    padding: 2.5rem 0;
+  }
 
   &__book-now {
     font-size: 2rem;

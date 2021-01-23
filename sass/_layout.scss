@@ -4,6 +4,12 @@
   background-color: $grey-light-2;
   box-shadow: $box-shadow-main;
   min-height: 50rem;
+
+  @include bp-1 {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -14,10 +20,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include bp-5 {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
 }
 
 .content {
   display: flex;
+
+  @include bp-3 {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -39,6 +55,14 @@
   background-color: $grey-light-1;
   border-bottom: $border-main;
   font-size: 1.4rem;
+
+  @include bp-3 {
+    padding: 3rem;
+  }
+
+  @include bp-4 {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -47,6 +71,16 @@
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem;
+
+  @include bp-3 {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @include bp-4 {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 .users-reviews {
